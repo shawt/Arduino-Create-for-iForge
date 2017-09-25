@@ -43,7 +43,7 @@ var (
 	portSSL               string
 	origins               = flag.String("origins", "", "Allowed origin list for CORS")
 	address               = flag.String("address", "127.0.0.1", "The address where to listen. Defaults to localhost")
-	signatureKey          = flag.String("signatureKey", "-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAvc0yZr1yUSen7qmE3cxF\nIE12rCksDnqR+Hp7o0nGi9123eCSFcJ7CkIRC8F+8JMhgI3zNqn4cUEn47I3RKD1\nZChPUCMiJCvbLbloxfdJrUi7gcSgUXrlKQStOKF5Iz7xv1M4XOP3JtjXLGo3EnJ1\npFgdWTOyoSrA8/w1rck4c/ISXZSinVAggPxmLwVEAAln6Itj6giIZHKvA2fL2o8z\nCeK057Lu8X6u2CG8tRWSQzVoKIQw/PKK6CNXCAy8vo4EkXudRutnEYHEJlPkVgPn\n2qP06GI+I+9zKE37iqj0k1/wFaCVXHXIvn06YrmjQw6I0dDj/60Wvi500FuRVpn9\ntwIDAQAB\n-----END PUBLIC KEY-----", "Pem-encoded public key to verify signed commandlines")
+	signatureKey          = flag.String("signatureKey", "-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAsJXTUKFwoGYy+bE5cDVZ\nLUevLEnnC3mbE+u3QZOvqbAw0zLC0ZU+twBeWEOsGcQhWLENLBLbk9NowNnA3ruA\nd0JMnrzRibvTvqC8ILGUIybLVh1Z/7QNa7xhCGZxbjugOpZP6Lokn/D4t9hpNpj4\nI2aRxJ+JpeRAI8NvGG6jg6H2D52LL71eCavJdeZBt8LYC6OuXLmsi9x1/b+V9Z4A\nN/U9MumkvdyVCkMm5KQKda0kZJDc3eFDihRHftVLGohpkzfVaafDfh0hlLSC7a7z\nEaS/x/uU4hXigxJrTC1AFKtro9CQ0SzRCufSfjt2iKTRnHeH+tSITgNEYmhxC7Sq\nyQIDAQAB\n-----END PUBLIC KEY-----", "Pem-encoded public key to verify signed commandlines")
 	Tools                 tools.Tools
 	indexURL              = flag.String("indexURL", "https://downloads.arduino.cc/packages/package_staging_index.json", "The address from where to download the index json containing the location of upload tools")
 	requiredToolsAPILevel = "v1"

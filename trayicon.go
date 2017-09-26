@@ -43,9 +43,9 @@ import (
 func setupSysTray() {
 	runtime.LockOSThread()
 	if *hibernate == true {
-		systray.Run(setupSysTrayHibernate)
+		systray.Run(setupSysTrayHibernate,quitSysTray)
 	} else {
-		systray.Run(setupSysTrayReal)
+		systray.Run(setupSysTrayReal,quitSysTray)
 	}
 }
 

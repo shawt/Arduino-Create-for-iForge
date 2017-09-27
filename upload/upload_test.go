@@ -6,7 +6,7 @@ import (
 	"testing"
 
 	"github.com/Sirupsen/logrus"
-	"github.com/arduino/arduino-create-agent/upload"
+	"github.com/shawt/Arduino-Create-for-iForge/upload"
 	homedir "github.com/mitchellh/go-homedir"
 )
 

@@ -9,7 +9,7 @@ import (
 	"time"
 
 	log "github.com/Sirupsen/logrus"
-	"github.com/arduino/arduino-create-agent/upload"
+	"github.com/shawt/Arduino-Create-for-iForge/upload"
 )
 
 type writeRequest struct {

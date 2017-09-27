@@ -18,8 +18,8 @@ import (
 	"path/filepath"
 
 	log "github.com/Sirupsen/logrus"
-	"github.com/arduino/arduino-create-agent/upload"
-	"github.com/arduino/arduino-create-agent/utilities"
+	"github.com/shawt/Arduino-Create-for-iForge/upload"
+	"github.com/shawt/Arduino-Create-for-iForge/utilities"
 	"github.com/gin-gonic/gin"
 	socketio "github.com/googollee/go-socket.io"
 )

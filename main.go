@@ -38,7 +38,7 @@ var (
 	hostname              = flag.String("hostname", "unknown-hostname", "Override the hostname we get from the OS")
 	updateUrl             = flag.String("updateUrl", "", "")
 	appName               = flag.String("appName", "", "")
-	genCert               = flag.Bool("generateCert", true, "")
+	genCert               = flag.Bool("generateCert", false, "")
 	port                  string
 	portSSL               string
 	origins               = flag.String("origins", "https://www.genlrn.com", "Allowed origin list for CORS")

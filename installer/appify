@@ -2,6 +2,7 @@
 
 APPNAME=${2:-$(basename "${1}" '.sh')};
 DIR="${APPNAME}.app/Contents/MacOS";
+PDIR="${APPNAME}.app/Contents";
 
 if [ -a "${APPNAME}.app" ]; then
 	echo "${PWD}/${APPNAME}.app already exists :(";
@@ -13,6 +14,7 @@ mv "${1}" "${DIR}/${APPNAME}";
 mv *.cer "${DIR}/";
 mv *.pem "${DIR}/";
 mv *.ini "${DIR}/";
+mv info.plist "${PDIR}/";
 chmod +x "${DIR}/";
 
 echo "${PWD}/$APPNAME.app";

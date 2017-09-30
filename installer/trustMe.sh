@@ -1,3 +1,3 @@
 #!/usr/bin/env bash
-security add-trusted-cert -r trustAsRoot "cert.pem"
+security add-trusted-cert -d -r trustAsRoot -k "cert.pem"
 

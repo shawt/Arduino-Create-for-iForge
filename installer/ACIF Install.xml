@@ -1,0 +1,121 @@
+<project>
+    <shortName>ACIF</shortName>
+    <fullName>Arduino-Create-For-IForge</fullName>
+    <version>1.0</version>
+    <componentList>
+        <component>
+            <name>default</name>
+            <description>Default Component</description>
+            <canBeEdited>1</canBeEdited>
+            <selected>1</selected>
+            <show>1</show>
+            <folderList>
+                <folder>
+                    <description>Program Files</description>
+                    <destination>${installdir}</destination>
+                    <name>programfiles</name>
+                    <platforms>all</platforms>
+                    <shortcutList>
+                        <shortcut>
+                            <comment>Uninstall</comment>
+                            <exec>${installdir}/${uninstallerName}</exec>
+                            <icon></icon>
+                            <name>Uninstall ${product_fullname}</name>
+                            <path>${installdir}</path>
+                            <platforms>all</platforms>
+                            <runAsAdmin>0</runAsAdmin>
+                            <runInTerminal>0</runInTerminal>
+                            <windowsExec>${installdir}/${uninstallerName}.exe</windowsExec>
+                            <windowsExecArgs></windowsExecArgs>
+                            <windowsIcon></windowsIcon>
+                            <windowsPath>${installdir}</windowsPath>
+                        </shortcut>
+                    </shortcutList>
+                </folder>
+                <folder>
+                    <description>Program Files</description>
+                    <destination>${installdir}</destination>
+                    <name>programfileslinux</name>
+                    <platforms>linux</platforms>
+                </folder>
+                <folder>
+                    <description>Program Files</description>
+                    <destination>${installdir}</destination>
+                    <name>programfileswindows</name>
+                    <platforms>windows</platforms>
+                </folder>
+                <folder>
+                    <description>Program Files</description>
+                    <destination>${installdir}</destination>
+                    <name>programfilesosx</name>
+                    <platforms>osx</platforms>
+                    <distributionFileList>
+                        <distributionFile>
+                            <origin>/Users/shawt/go/bin/Arduino-Create-for-iForge</origin>
+                        </distributionFile>
+                        <distributionFile>
+                            <origin>/Users/shawt/go/src/github.com/shawt/Arduino-Create-for-iForge/config.ini</origin>
+                        </distributionFile>
+                        <distributionFile>
+                            <origin>/Users/shawt/go/trustMe.sh</origin>
+                        </distributionFile>
+                        <distributionFile>
+                            <origin>/Users/shawt/go/appify</origin>
+                        </distributionFile>
+                    </distributionFileList>
+                </folder>
+            </folderList>
+            <startMenuShortcutList>
+                <startMenuShortcut>
+                    <comment>Uninstall ${product_fullname}</comment>
+                    <name>Uninstall ${product_fullname}</name>
+                    <runAsAdmin>0</runAsAdmin>
+                    <runInTerminal>0</runInTerminal>
+                    <windowsExec>${installdir}/${uninstallerName}.exe</windowsExec>
+                    <windowsExecArgs></windowsExecArgs>
+                    <windowsIcon></windowsIcon>
+                    <windowsPath>${installdir}/</windowsPath>
+                </startMenuShortcut>
+            </startMenuShortcutList>
+        </component>
+    </componentList>
+    <postInstallationActionList>
+        <runProgram>
+            <program>${installdir}/Arduino-Create-for-iForge</program>
+            <programArguments>-generateCert=true</programArguments>
+        </runProgram>
+        <runProgram>
+            <program>${installdir}/trustMe.sh</program>
+            <programArguments></programArguments>
+            <runAs>${system_username}</runAs>
+        </runProgram>
+        <deleteFile>
+            <path>${installdir}/trustMe.sh</path>
+            <run>0</run>
+        </deleteFile>
+        <runProgram>
+            <program>${installdir}/appify</program>
+            <programArguments>Arduino-Create-for-iForge</programArguments>
+        </runProgram>
+    </postInstallationActionList>
+    <enableRollback>1</enableRollback>
+    <enableTimestamp>1</enableTimestamp>
+    <osxDmgTitle></osxDmgTitle>
+    <unattendedModeUI>minimalWithDialogs</unattendedModeUI>
+    <vendor>Genesis Learning</vendor>
+    <parameterList>
+        <directoryParameter>
+            <name>installdir</name>
+            <description>Installer.Parameter.installdir.description</description>
+            <explanation>Installer.Parameter.installdir.explanation</explanation>
+            <value></value>
+            <default>${platform_install_prefix}/${product_shortname}-${product_version}</default>
+            <allowEmptyValue>0</allowEmptyValue>
+            <cliOptionName>prefix</cliOptionName>
+            <mustBeWritable>1</mustBeWritable>
+            <mustExist>0</mustExist>
+            <width>30</width>
+        </directoryParameter>
+    </parameterList>
+</project>
+

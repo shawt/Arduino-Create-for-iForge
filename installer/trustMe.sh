@@ -3,4 +3,4 @@ security add-trusted-cert -d -r trustAsRoot -k "/Library/Keychains/System.keycha
 security add-trusted-cert -d -r trustAsRoot -k "/Library/Keychains/System.keychain" "./ca.cert.cer"
 
 chmod 7555 "key.pem"
-chmod +x "acfi.plist"
+chmod +x "com.genlrn.acfi.plist"

@@ -102,7 +102,7 @@ func setupSysTrayReal() {
 	go func() {
 		for {
 			<-mUrl.ClickedCh
-			open.Start("http://iforge.genlrn.com")
+			open.Start("http://if.genlrn.com")
 		}
 	}()
 }

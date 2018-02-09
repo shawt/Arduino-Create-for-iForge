@@ -1,4 +1,4 @@
-// Version 1.82
+// Version 2
 // Supports Windows, Linux, Mac, and Raspberry Pi, Beagle Bone Black
 
 package main
@@ -25,7 +25,7 @@ import (
 )
 
 var (
-	version               = "1.0.0" //don't modify it, Jenkins will take care
+	version               = "2.0.0" //don't modify it, Jenkins will take care
 	git_revision          = "xxxxxxxx"  //don't modify it, Jenkins will take care
 	embedded_autoextract  = false
 	hibernate             = flag.Bool("hibernate", false, "start hibernated")
@@ -41,7 +41,7 @@ var (
 	genCert               = flag.Bool("generateCert", false, "")
 	port                  string
 	portSSL               string
-	origins               = flag.String("origins", "https://www.genlrn.com", "Allowed origin list for CORS")
+	origins               = flag.String("origins", "https://if.genlrn.com", "Allowed origin list for CORS")
 	address               = flag.String("address", "127.0.0.1", "The address where to listen. Defaults to localhost")
 	signatureKey          = flag.String("signatureKey", "-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAsJXTUKFwoGYy+bE5cDVZ\nLUevLEnnC3mbE+u3QZOvqbAw0zLC0ZU+twBeWEOsGcQhWLENLBLbk9NowNnA3ruA\nd0JMnrzRibvTvqC8ILGUIybLVh1Z/7QNa7xhCGZxbjugOpZP6Lokn/D4t9hpNpj4\nI2aRxJ+JpeRAI8NvGG6jg6H2D52LL71eCavJdeZBt8LYC6OuXLmsi9x1/b+V9Z4A\nN/U9MumkvdyVCkMm5KQKda0kZJDc3eFDihRHftVLGohpkzfVaafDfh0hlLSC7a7z\nEaS/x/uU4hXigxJrTC1AFKtro9CQ0SzRCufSfjt2iKTRnHeH+tSITgNEYmhxC7Sq\nyQIDAQAB\n-----END PUBLIC KEY-----", "Pem-encoded public key to verify signed commandlines")
 	Tools                 tools.Tools

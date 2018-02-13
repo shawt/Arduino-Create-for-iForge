@@ -8,12 +8,10 @@ import (
 	"strings"
 	"time"
 
-<<<<<<< HEAD
+
 	log "github.com/Sirupsen/logrus"
 	"github.com/shawt/Arduino-Create-for-iForge/upload"
-=======
-	"github.com/arduino/arduino-create-agent/upload"
->>>>>>> 6d4a183cd840acc97804a885395e9a27c66e9087
+
 )
 
 type writeRequest struct {
